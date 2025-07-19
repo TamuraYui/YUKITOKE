@@ -47,8 +47,8 @@ public abstract class EnemyBase : MonoBehaviour
     void EnemyAct()
     {
         Vector2 start = this.transform.position;
-        RaycastHit2D hit = Physics2D.Linecast(start,start - _lineForPlayer * 10, _layerMask);
-        Debug.DrawLine(transform.position,start - _lineForPlayer * 10, Color.red);  // 検出するセンサー の可視化
+        RaycastHit2D hit = Physics2D.Linecast(start,start - _lineForPlayer, _layerMask);
+        Debug.DrawLine(transform.position,start - _lineForPlayer, Color.red);  // 検出するセンサー の可視化
 
         if (hit.collider != null)
         {

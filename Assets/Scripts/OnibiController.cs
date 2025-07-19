@@ -4,10 +4,20 @@ using UnityEngine;
 
 public class OnibiController : EnemyBase
 {
+    CircleCollider2D _circol;
     public override void Ability()
     {
-        Debug.Log("player”­Œ©I");
-        //”š”­‚·‚éˆ—‚ğ‘‚­
-    }
+        _circol = GetComponent<CircleCollider2D>();
+        Debug.Log("player”­Œ©IOni");
 
+        if (_circol != null)
+        {
+            for (int i = 0; i < 1.05; i++)
+            {
+                _circol.radius += 0.001f;
+            }
+
+            //Destroy(gameObject);
+        }
+    }
 }
